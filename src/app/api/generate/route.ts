@@ -25,8 +25,8 @@ export async function POST(request: NextRequest) {
       credentials: falKey,
     });
 
-    // Prepare image URLs for the request (max 8)
-    const imageUrls: string[] = images.slice(0, 8);
+    // Prepare image URLs for the request (max 10)
+    const imageUrls: string[] = images.slice(0, 10);
 
     // Build the prompt for the Christmas card
     const fullPrompt = `Create a cute illustrated card with the elements (i.e., figures with their clothes and decorations, pets, and other notable features) from all the reference images using comic style. You need to ensure the main figure of each reference image is present in the card (in this case, there are ${images.length} reference images). Use playful pastel colors and soft shading. Add festive hand-drawn text above the characters that reads Happy Holidays. Add a smaller friendly message that reads Sending joy your way. Use aspect ratio 1:1.`;

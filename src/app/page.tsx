@@ -16,7 +16,7 @@ export default function Home() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-          images: images.slice(0, 8),
+          images: images.slice(0, 10),
         }),
       });
 
