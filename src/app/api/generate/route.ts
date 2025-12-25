@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     const imageUrls: string[] = images.slice(0, 8);
 
     // Build the prompt for the Christmas card
-    const fullPrompt = `Create a cute illustrated card with the elements (i.e., figures with their clothes and decorations, pets, and other notable features) from the reference images using comic style. Use playful pastel colors and soft shading. Add festive hand-drawn text above the characters that reads Happy Holidays. Add a smaller friendly message that reads Sending joy your way. Use aspect ratio 1:1.`;
+    const fullPrompt = `Create a cute illustrated card with the elements (i.e., figures with their clothes and decorations, pets, and other notable features) from all the reference images using comic style. You need to ensure the main figure of each reference image is present in the card (in this case, there are ${images.length} reference images). Use playful pastel colors and soft shading. Add festive hand-drawn text above the characters that reads Happy Holidays. Add a smaller friendly message that reads Sending joy your way. Use aspect ratio 1:1.`;
 
     // Call FAL.ai nano-banana-pro/edit API using the official client
     const result = await fal.subscribe("fal-ai/nano-banana-pro/edit", {
