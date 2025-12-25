@@ -52,7 +52,7 @@ export default function Home() {
             <ImageUploader
               images={images}
               onImagesChange={setImages}
-              maxImages={8}
+              maxImages={10}
             />
           </div>
         </section>
