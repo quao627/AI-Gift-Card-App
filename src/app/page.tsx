@@ -16,7 +16,7 @@ export default function Home() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-          images: images.slice(0, 10),
+          images: images.slice(0, 15),
         }),
       });
 
@@ -52,7 +52,7 @@ export default function Home() {
             <ImageUploader
               images={images}
               onImagesChange={setImages}
-              maxImages={10}
+              maxImages={15}
             />
           </div>
         </section>
